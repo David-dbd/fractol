@@ -25,13 +25,13 @@ static void ft_something_wrong(void)
     exit(EXIT_FAILURE);
 }
 
-void ft_error(int n)
+void ft_check_error(int error)
 {
-    if (n == 1)
+    if (error == 1)
         ft_check_arg();
-    else if (n == 2)
+    else if (error == 2)
         ft_error_ms();
-    else if (n == 3)
+    else if (error == 3)
         ft_something_wrong();
     return (0);
 }

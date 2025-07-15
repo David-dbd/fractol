@@ -1,7 +1,10 @@
 #include "fractol.h"
 
-int ft_arg_check(int argc, char **argv)
+char ft_arg_check(int argc, char **argv)
 {
+    char c;
+
+    c = 'm';
     if (argc == 2)
     {
         if (strcmp(argv[2], "mandelbrot") != 0)
@@ -18,6 +21,7 @@ int ft_arg_check(int argc, char **argv)
             if (argv[3][0] != 'x')
                 ft_check_error(1);
         }
+        c = 'j';
     }
-    return (0);
+    return (c);
 }
