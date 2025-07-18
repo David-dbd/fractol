@@ -1,13 +1,17 @@
-#ifndef FRACTAOL_
+#ifndef FRACTOL_
 # define FRACTOL_
-# ifndef HEIGTH
-    #define HEIGTH = 600;
-# ifndef WIDTH
-    #define WIDTH = 400;
 
-#include <stdlib.h>
-#include <stdio.h>
-//#include "libft.h"
+# ifndef HEIGTH
+    #define HEIGTH 600;
+# endif
+# ifndef WIDTH
+    #define WIDTH 400;
+# endif
+# include <stdlib.h>
+# include <stdio.h>
+# include "./minilibx/mlx.h"
+# include "libft.h"
+# include "libftprintf.h"
 typedef struct s_fract
 {
     double cor_real;
