@@ -2,11 +2,16 @@
 
 static void ft_color(t_fract *f, int i)
 {
-    int color_arr[] = {0x220022, 0x442288, 0x88FFAA, 0xFFFFBB};
+    /*int color_arr[] = {0x220022, 0x442288, 0x88FFAA, 0xFFFFBB};
     if (f->flag_escapes == 1)
     {
         if (i > 0)
             f->color = color_arr[i % 4];
+    }*/
+    if (f->flag_escapes == 1)
+    {
+        if (i > 0)
+            f->color = i * 0x442288;
     }
     else if (f->flag_escapes == 0)
         f->color = 0x000000;
@@ -44,7 +49,7 @@ static int ft_z_equation(t_fract *f) /*Zn+1 = Zn^2 + c*/
 static int ft_find_complex_co(char **argv, t_fract *f, int y, int x)
 {
     /*c = x + yi*/
-    if (strcmp(argv[1], "julia") == 0)
+    if (ft_strcmp(argv[1], "julia") == 0)
     {
         if (f->type == 0)
         {
@@ -54,7 +59,7 @@ static int ft_find_complex_co(char **argv, t_fract *f, int y, int x)
         }
         return (0);
     }
-    else if (strcmp(argv[1], "mandelbrot") == 0)
+    else if (ft_strcmp(argv[1], "mandelbrot") == 0)
     {
         f->cor_real = -2.0 + x * (1.0 - (-2.0)) / WIDTH;
         f->cor_im = 1.2 - y * (1.2 - (-1.2)) / HEIGTH;

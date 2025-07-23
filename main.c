@@ -2,15 +2,14 @@
 
 int main(int argc, char **argv)
 {
-    //int validate;
     t_fract f;
     char c;
     //Can Height and WIDTH be 0 or less? i guess so cuz we are talking about a plano cartesiano
     c = '\0';
     if (argc > 5 || argc == 3 || argc == 4)
-        ft_check_error(1);
+        ft_check_error(1, &f);
     else if (argc == 2 || argc == 5)
-        c = ft_arg_check(argc, argv);
+        c = ft_arg_check(argc, argv, &f);
     ft_struct_init(&f);
     ft_init_graphic(&f);
     ft_creation(&f);

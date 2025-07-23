@@ -2,16 +2,28 @@
 # define FRACTOL_
 
 # ifndef HEIGTH
-    #define HEIGTH 600;
+    #define HEIGTH 600
 # endif
 # ifndef WIDTH
-    #define WIDTH 400;
+    #define WIDTH 400
+# endif
+# ifndef ESC_KEY
+    #define ESC_KEY 1
+# endif
+# ifndef SCROLL_UP
+    #define SCROLL_UP 5
+# endif
+# ifndef SCROLL_DOWN
+    #define SCROLL_DOWN 5
 # endif
 # include <stdlib.h>
 # include <stdio.h>
-# include "./minilibx/mlx.h"
+#include <math.h>
 # include "libft.h"
 # include "libftprintf.h"
+#include "mlx_int.h"
+#include "mlx.h"
+
 typedef struct s_fract
 {
     double cor_real;
@@ -35,15 +47,17 @@ typedef struct s_fract
     void *buffer_img;
 } t_fract;
 
-char ft_arg_check(int argc, char **argv);
-int main(int argc, char **argv);
-int ft_check_error(int error);
-int ft_struct_init(t_fract *f);
-int ft_init_graphic(t_fract *f);
-int ft_creation(t_fract *f);
-int ft_set_framework(t_fract *f, char c);
-int ft_set_and_assign(t_fract *f);
-int ft_main_loops(char **argv, t_fract *f);
-int ft_display(t_fract *f);
-
+char ft_arg_check(int argc, char **argv, t_fract *f);
+int		main(int argc, char **argv);
+int		ft_struct_init(t_fract *f);
+int		ft_init_graphic(t_fract *f);
+int		ft_creation(t_fract *f);
+int		ft_set_framework(t_fract *f, char c);
+int		ft_set_and_assign(t_fract *f);
+int		ft_main_loops(char **argv, t_fract *f);
+int		ft_display(t_fract *f);
+int		ft_strcmp(char *s1, char *s2);
+int		ft_strisalpha(char *str);
+void		ft_check_error(int error, t_fract *f);
+void        ft_destroy_and_close(t_fract *f);
 #endif
