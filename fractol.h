@@ -21,7 +21,7 @@
 #include <math.h>
 # include "libft.h"
 # include "libftprintf.h"
-#include "mlx_int.h"
+//#include "mlx_int.h"
 #include "mlx.h"
 
 typedef struct s_fract
@@ -32,10 +32,10 @@ typedef struct s_fract
     int zoom;
     int bpp;
     int size_line;
-    int min_re;
-    int max_re;
-    int min_im;
-    int max_im;
+    double min_re;
+    double max_re;
+    double min_im;
+    double max_im;
     int mouse_real_cor;
     int mouse_im_cor;
     int counter;
@@ -48,6 +48,7 @@ typedef struct s_fract
 } t_fract;
 
 char ft_arg_check(int argc, char **argv, t_fract *f);
+double ft_atof(const char *str);
 int		main(int argc, char **argv);
 int		ft_struct_init(t_fract *f);
 int		ft_init_graphic(t_fract *f);

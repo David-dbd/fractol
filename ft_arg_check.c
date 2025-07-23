@@ -7,7 +7,7 @@ char ft_arg_check(int argc, char **argv, t_fract *f)
     c = 'm';
     if (argc == 2)
     {
-        if (ft_strcmp(argv[2], "mandelbrot") != 0)
+        if (ft_strcmp(argv[1], "mandelbrot") != 0)
             ft_check_error(1, f);
     }
     else if (argc == 5)
