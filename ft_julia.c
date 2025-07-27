@@ -8,9 +8,9 @@ static int ft_julia_equation(t_fract *f, double z_real, double z_im)
     
     i = 0;
     if (f->counter <= 30)
-        max = 100 * f->counter;
+        max = 50 * f->counter;
     else
-        max = 100 + log(f->zoom) * 30;
+        max = 100 + log(f->zoom) * 10;
     while (i < max)
     {
         temp_real = z_real * z_real - z_im * z_im;
@@ -40,7 +40,7 @@ int ft_julia(char **argv, t_fract *f, int y, int x)
     if (f->type == 0)
     {
         f->julia_re = ft_atof(argv[2]);
-        f->julia_im = ft_atof(argv[4]);
+        f->julia_im = ft_atof(argv[3]);
         f->type = 1; /*So that we stick with the same c always*/
     }
     /*z = x + yi*/

@@ -12,12 +12,22 @@ static int ft_mouse_calc(t_fract *f, int x, int y)
     /*We first find the mouse x - y position*/
     f->mouse_real_cor = f->min_re + x * (f->max_re - f->min_re) / WIDTH;
     f->mouse_im_cor = f->max_im - y * (f->max_im - f->min_im) / HEIGTH;
-    new_width  = (f->max_re - f->min_re) * f->zoom;/*We need to recalculate the dimensions of the complex map (NOT THE WINDOW OR IMAGE) with the zoom*/
-    new_heigth = (f->max_im - f->min_im) * f->zoom;/*both new represent the new WIDTH and HEIGHT withing the complex map and when mulpitplying by zoom, we get the new size of the map*/
+    new_width  = (f->max_re - f->min_re) / f->zoom;/*We need to recalculate the dimensions of the complex map (NOT THE WINDOW OR IMAGE) with the zoom*/
+    new_heigth = (f->max_im - f->min_im) / f->zoom;/*both new represent the new WIDTH and HEIGHT withing the complex map and when mulpitplying by zoom, we get the new size of the map*/
     f->min_re  = f->mouse_real_cor - new_width / 2.0;/*We use 2.0 because we want to divide in 2 halfs both x and y in context with the mouse*/
     f->max_re  = f->mouse_real_cor + new_width / 2.0;/*So this is the new frame based on the new size of the map*/
     f->min_im  = f->mouse_im_cor - new_heigth / 2.0;
     f->max_im  = f->mouse_im_cor + new_heigth / 2.0;
+    return (0);
+}
+
+static int ft_expose_handler(t_fract *f)
+{
+    printf("Expose event - window needs redraw\n");
+    fflush(stdout);
+    
+    // Redibujar el fractal actual
+    ft_display(f);
     return (0);
 }
 
@@ -46,11 +56,11 @@ static int ft_mouse_handler(int mouse_key, int x, int y, t_fract *f)
         else if (mouse_key == SCROLL_DOWN) //5
         {
             f->zoom /= 1.1;
-            if (f->counter - 1 > 0)
+            if (f->counter > 1)
                 f->counter--;
         }
         ft_mouse_calc(f, x, y);
-        ft_creation(f);
+        ft_main_loops(NULL, f);
         ft_display(f);
     }
     return (0);
@@ -58,7 +68,6 @@ static int ft_mouse_handler(int mouse_key, int x, int y, t_fract *f)
 
 static int ft_close_handler(t_fract *f)
 {
-    ft_struct_init(f);
     ft_destroy_and_close(f);
     exit(EXIT_SUCCESS);
     return (0);
@@ -74,5 +83,6 @@ int ft_set_and_assign(t_fract *f)
         ft_check_error(3, f);
     mlx_key_hook(f->window, ft_key_handler, f);
     mlx_mouse_hook(f->window, ft_mouse_handler, f);
+    mlx_expose_hook(f->window, ft_expose_handler, f);
     return (0);
 }

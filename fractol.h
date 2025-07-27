@@ -2,13 +2,13 @@
 # define FRACTOL_
 
 # ifndef HEIGTH
-    #define HEIGTH 600
+    #define HEIGTH 1300
 # endif
 # ifndef WIDTH
-    #define WIDTH 400
+    #define WIDTH 1000
 # endif
 # ifndef ESC_KEY
-    #define ESC_KEY 1
+    #define ESC_KEY 65307
 # endif
 # ifndef SCROLL_UP
     #define SCROLL_UP 4
@@ -26,6 +26,7 @@
 
 typedef struct s_fract
 {
+    char c;
     double cor_real;
     double cor_im;
     double min_re;
@@ -49,13 +50,15 @@ typedef struct s_fract
     void *buffer_img;
 } t_fract;
 
-char ft_arg_check(int argc, char **argv, t_fract *f);
+void ft_arg_check(int argc, char **argv, t_fract *f);
 double ft_atof(const char *str);
+int ft_julia(char **argv, t_fract *f, int y, int x);
+int ft_mandelbrot(t_fract *f, int y, int x);
 int		main(int argc, char **argv);
 int		ft_struct_init(t_fract *f);
 int		ft_init_graphic(t_fract *f);
 int		ft_creation(t_fract *f);
-int		ft_set_framework(t_fract *f, char c);
+int		ft_set_framework(t_fract *f);
 int		ft_set_and_assign(t_fract *f);
 int		ft_main_loops(char **argv, t_fract *f);
 int		ft_display(t_fract *f);

@@ -26,9 +26,9 @@ int ft_main_loops(char **argv, t_fract *f)
         x = 0;
         while (x < WIDTH)
         {
-            if (ft_strcmp("julia", argv[1]) == 0)
+            if (f->c == 'j')
                 i = ft_julia(argv, f, y, x);
-            else if (ft_strcmp("mandelbrot", argv[1]) == 0)
+            else if (f->c == 'm')
                 i = ft_mandelbrot(f, y, x); /*aply c to the z equation. it returns the iteration number*/
             ft_color(f, i); /*apply the color*/
             offset = y * f->size_line + x * (f->bpp / 8);

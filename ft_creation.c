@@ -6,5 +6,6 @@ int ft_creation(t_fract *f)
     f->buffer_img = mlx_new_image(f->init_graphic, WIDTH, HEIGTH);
     if (!f->window || !f->buffer_img)
         ft_check_error(3, f);
+    mlx_do_sync(f->init_graphic);
     return (0);
 }

@@ -1,19 +1,15 @@
 #include "fractol.h"
-
-static int ft_mandelbrot(t_fract *f) /*Zn+1 = Zn^2 + c*/
+/*
+static int ft_mandelbrot_equation(t_fract *f) //Zn+1 = Zn^2 + c
 {
     int i;
     int max;
     double z;
-    double k; /*k works as Zn^2 while z will act as Zn+1*/
+    double k; //k works as Zn^2 while z will act as Zn+1
 
     i = 0;
-    if (f->counter <= 30)
-        max = 100 * f->counter;
-    else
-        max = 100 + log(f->zoom) * 30;
-    z = 0;/*This is totally unnecesary. However, lets keep it like the equation says*/
-    z = ((i * i) + ((f->cor_real * f->cor_real) + (f->cor_im * f->cor_im))); /*I use i * i just to exactly replicate the equation although is not necesary*/
+    z = 0;//This is totally unnecesary. However, lets keep it like the equation says
+    z = ((i * i) + ((f->cor_real * f->cor_real) + (f->cor_im * f->cor_im))); //I use i * i just to exactly replicate the equation although is not necesary
     while (i < max)
     {
         k = z * z;
@@ -27,9 +23,43 @@ static int ft_mandelbrot(t_fract *f) /*Zn+1 = Zn^2 + c*/
     }
     f->flag_escapes = 0;
     return (0);
+}*/
+
+static int ft_mandelbrot_equation(t_fract *f)
+{
+    int i;
+    int max;
+    double z_real, z_im;
+    double temp_real;
+    
+    i = 0;
+    z_real = 0.0;
+    z_im = 0.0;
+    if (f->counter >= 10 && f->counter <= 30)
+        max = 50 * f->counter;
+    else if (f->counter > 30)
+        max = 100 + log(f->zoom) * 10;
+    else
+        max = 50;
+    while (i < max)
+    {
+        temp_real = z_real * z_real - z_im * z_im;
+        z_im = 2.0 * z_real * z_im;
+        z_real = temp_real;
+        z_real += f->cor_real;
+        z_im += f->cor_im;
+        if (z_real * z_real + z_im * z_im > 4.0)
+        {
+            f->flag_escapes = 1;
+            return (i);
+        }
+        i++;
+    }
+    f->flag_escapes = 0;
+    return (0);
 }
 
-int ft_mandelbrot(char **argv, t_fract *f, int y, int x)
+int ft_mandelbrot(t_fract *f, int y, int x)
 {
     int i;
 
