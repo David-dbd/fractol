@@ -18,6 +18,8 @@ int ft_struct_init(t_fract *f)
     f->min_re = 0;
     f->max_im = 0;
     f->min_im = 0;
+    f->julia_re = 0;
+    f->julia_im = 0;
     f->counter = 0;
     return (0);
 }

@@ -13,9 +13,9 @@ static int ft_mouse_calc(t_fract *f, int x, int y)
     f->mouse_real_cor = f->min_re + x * (f->max_re - f->min_re) / WIDTH;
     f->mouse_im_cor = f->max_im - y * (f->max_im - f->min_im) / HEIGTH;
     new_width  = (f->max_re - f->min_re) * f->zoom;/*We need to recalculate the dimensions of the complex map (NOT THE WINDOW OR IMAGE) with the zoom*/
-    new_heigth = (f->max_im - f->min_im) * f->zoom;
+    new_heigth = (f->max_im - f->min_im) * f->zoom;/*both new represent the new WIDTH and HEIGHT withing the complex map and when mulpitplying by zoom, we get the new size of the map*/
     f->min_re  = f->mouse_real_cor - new_width / 2.0;/*We use 2.0 because we want to divide in 2 halfs both x and y in context with the mouse*/
-    f->max_re  = f->mouse_real_cor + new_width / 2.0;
+    f->max_re  = f->mouse_real_cor + new_width / 2.0;/*So this is the new frame based on the new size of the map*/
     f->min_im  = f->mouse_im_cor - new_heigth / 2.0;
     f->max_im  = f->mouse_im_cor + new_heigth / 2.0;
     return (0);

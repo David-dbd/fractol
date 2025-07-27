@@ -11,7 +11,7 @@
     #define ESC_KEY 1
 # endif
 # ifndef SCROLL_UP
-    #define SCROLL_UP 5
+    #define SCROLL_UP 4
 # endif
 # ifndef SCROLL_DOWN
     #define SCROLL_DOWN 5
@@ -28,14 +28,16 @@ typedef struct s_fract
 {
     double cor_real;
     double cor_im;
-    char *ptr_buf_img;
-    int zoom;
-    int bpp;
-    int size_line;
     double min_re;
     double max_re;
     double min_im;
     double max_im;
+    double julia_re;
+    double julia_im;
+    char *ptr_buf_img;
+    int zoom;
+    int bpp;
+    int size_line;
     int mouse_real_cor;
     int mouse_im_cor;
     int counter;
