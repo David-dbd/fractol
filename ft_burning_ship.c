@@ -1,54 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mandelbrot.c                                    :+:      :+:    :+:   */
+/*   ft_burning_ship.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/29 22:04:37 by davdiaz-          #+#    #+#             */
-/*   Updated: 2025/07/29 22:10:54 by davdiaz-         ###   ########.fr       */
+/*   Created: 2025/07/29 23:10:54 by davdiaz-          #+#    #+#             */
+/*   Updated: 2025/07/29 23:12:04 by davdiaz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-static int	ft_mandelbrot_equation(t_fract *f, int max, int i)
+static int	ft_burningship_equation(t_fract *f)
 {
-	double	z_real;
-	double	z_im;
-	double	temp_real;
+	double	zx;
+	double	zy;
+	double	temp;
+	int		i;
+	int		max;
 
-	z_real = 0.0;
-	z_im = 0.0;
+	zx = 0.0;
+	zy = 0.0;
+	i = 0;
+	max = 300;
+	f->flag_escapes = 0;
 	while (i < max)
 	{
-		temp_real = z_real * z_real - z_im * z_im;
-		z_im = 2.0 * z_real * z_im;
-		z_real = temp_real;
-		z_real += f->cor_real;
-		z_im += f->cor_im;
-		if (z_real * z_real + z_im * z_im > 4.0)
+		if (zx * zx + zy * zy > 4.0)
 		{
 			f->flag_escapes = 1;
 			return (i);
 		}
+		temp = zx * zx - zy * zy + f->cor_real;
+		zy = fabs(2.0 * zx * zy) + f->cor_im;
+		zx = fabs(temp);
 		i++;
 	}
 	f->flag_escapes = 0;
 	return (0);
 }
 
-int	ft_mandelbrot(t_fract *f, int y, int x)
+int	ft_burningship(t_fract *f, int y, int x)
 {
 	int	i;
-	int	j;
-	int	max;
 
-	i = 0;
-	j = 0;
-	max = 30;
 	f->cor_real = f->min_re + x * (f->max_re - f->min_re) / WIDTH;
-	f->cor_im = f->max_im - y * (f->max_im - f->min_im) / HEIGTH;
-	i = ft_mandelbrot_equation(f, max, j);
+	f->cor_im = f->min_im + y * (f->max_im - f->min_im) / HEIGTH;
+	i = ft_burningship_equation(f);
 	return (i);
 }

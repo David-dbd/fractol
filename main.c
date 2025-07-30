@@ -1,32 +1,36 @@
-#include "fractol.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/29 21:06:46 by davdiaz-          #+#    #+#             */
+/*   Updated: 2025/07/29 21:13:17 by davdiaz-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main(int argc, char **argv)
+#include "../includes/fractol.h"
+
+static void	ft_check_size(void)
 {
-    t_fract f;
-    //Can Height and WIDTH be 0 or less? i guess so cuz we are talking about a plano cartesiano
-    ft_arg_check(argc, argv, &f);
-    ft_printf("arg_check\n");
-    fflush(stdout);
-    ft_struct_init(&f);
-    ft_printf("strcut init\n");
-    fflush(stdout);
-    ft_init_graphic(&f);
-    ft_printf("init_graphic\n");
-    fflush(stdout);
-    ft_creation(&f);
-    ft_printf("ft_creation\n");
-    fflush(stdout);
-    ft_set_framework(&f);
-    ft_printf("set_framework\n");
-    fflush(stdout);
-    ft_set_and_assign(&f, argv);
-    ft_printf("set and assign\n");
-    fflush(stdout);
-    ft_main_loops(argv, &f);
-    ft_printf("main_loops\n");
-    fflush(stdout);
-    ft_display(&f);
-    fflush(stdout);
-    mlx_loop(f.init_graphic);
-    return (0);
+	if (WIDTH < 1 || HEIGTH < 1)
+		exit(EXIT_FAILURE);
+}
+
+int	main(int argc, char **argv)
+{
+	t_fract	f;
+
+	ft_check_size();
+	ft_arg_check(argc, argv, &f);
+	ft_struct_init(&f);
+	ft_init_graphic(&f);
+	ft_creation(&f);
+	ft_set_framework(&f);
+	ft_set_and_assign(&f);
+	ft_main_loops(argv, &f);
+	ft_display(&f);
+	mlx_loop(f.init_graphic);
+	return (0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_main_loops.c                                    :+:      :+:    :+:   */
+/*   ft_main_loops_mouse.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/29 20:39:31 by davdiaz-          #+#    #+#             */
-/*   Updated: 2025/07/29 23:20:04 by davdiaz-         ###   ########.fr       */
+/*   Created: 2025/07/29 20:44:04 by davdiaz-          #+#    #+#             */
+/*   Updated: 2025/07/29 23:19:51 by davdiaz-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	ft_apply_color(t_fract *f, int x, int y)
 	*(int *)(f->ptr_buf_img + offset) = f->color;
 }
 
-int	ft_main_loops(char **argv, t_fract *f)
+int	ft_main_loops_mouse(t_fract *f)
 {
 	int	x;
 	int	y;
@@ -34,7 +34,7 @@ int	ft_main_loops(char **argv, t_fract *f)
 		while (x < WIDTH)
 		{
 			if (f->c == 'j')
-				i = ft_julia(argv, f, y, x);
+				i = ft_julia(NULL, f, y, x);
 			else if (f->c == 'm')
 				i = ft_mandelbrot(f, y, x);
 			else if (f->c == 'b')
