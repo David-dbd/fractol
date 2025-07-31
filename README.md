@@ -251,9 +251,5 @@ Available input:
   ./fractol julia 0.285 0
 
 * Please note values can go from -2.0 to 2.0
-```
 
----
-
-Si quieres, puedo añadir **una sección de controles** para explicar cómo usar el teclado y el mouse para hacer zoom y mover el fractal. ¿Quieres que la agregue también?
 
