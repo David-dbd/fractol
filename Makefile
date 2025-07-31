@@ -6,7 +6,7 @@
 #    By: DAVID <DAVID@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/18 19:01:11 by davdiaz-          #+#    #+#              #
-#    Updated: 2025/07/29 23:46:35 by davdiaz-         ###   ########.fr        #
+#    Updated: 2025/07/31 19:27:00 by DAVID            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,6 @@ SRCS = \
     src/ft_display.c \
     src/ft_init_graphic.c \
     src/ft_main_loops.c \
-    src/ft_main_loops_mouse.c \
     src/ft_set_and_assign.c \
     src/ft_set_framework.c \
     src/ft_strcmp.c \
@@ -64,7 +63,7 @@ $(LIBFT):
 	@$(MAKE) -C $(dir $@)
 
 $(PRINTF):
-	@$(MAKE) -C $(dir $@)
+	@$(MAKE) -C ft_printf
 
 $(MINILIBX): $(MINILIBX_TAR)
 	@echo "$(BLUE)📦 Extrayendo $(MINILIBX_TAR)...$(RESET)"
