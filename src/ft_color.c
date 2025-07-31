@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_color.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: DAVID <DAVID@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 20:23:10 by davdiaz-          #+#    #+#             */
-/*   Updated: 2025/07/30 04:14:25 by davdiaz-         ###   ########.fr       */
+/*   Updated: 2025/07/31 19:54:00 by DAVID            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+
+
+/*Here, based on the zoom counter we set (f->counter), we change the color type*/
 
 static void	ft_color3(t_fract *f, int i)
 {

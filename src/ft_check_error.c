@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_error.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: DAVID <DAVID@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 20:13:20 by davdiaz-          #+#    #+#             */
-/*   Updated: 2025/07/29 20:23:00 by davdiaz-         ###   ########.fr       */
+/*   Updated: 2025/07/31 19:45:51 by DAVID            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,11 @@ went wrong during the set up of every functon*/
 static void	ft_something_wrong(void)
 {
 	perror("\nSomething went wrong. Please try again.\n");
+	ft_printf("Error: %s\n", strerror(errno));
 }
 
 void	ft_check_error(int error, t_fract *f)
 {
-	errno = 0;
 	if (error == 1)
 		ft_invalid_arg();
 	else if (error == 2)

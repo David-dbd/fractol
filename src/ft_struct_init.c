@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_struct_init.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: DAVID <DAVID@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 21:03:59 by davdiaz-          #+#    #+#             */
-/*   Updated: 2025/07/29 21:06:14 by davdiaz-         ###   ########.fr       */
+/*   Updated: 2025/07/31 19:40:18 by DAVID            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_struct_init(t_fract *f)
 	f->ptr_buf_img = NULL;
 	f->flag_escapes = 0;
 	f->color = 0;
-	f->type = 0;
+	f->flag = 0;
 	f->init_graphic = NULL;
 	f->window = NULL;
 	f->buffer_img = NULL;

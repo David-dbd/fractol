@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_and_assign.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: DAVID <DAVID@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 20:54:18 by davdiaz-          #+#    #+#             */
-/*   Updated: 2025/07/29 23:39:41 by davdiaz-         ###   ########.fr       */
+/*   Updated: 2025/07/31 19:25:30 by DAVID            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static int	ft_mouse_handler(int mouse_key, int x, int y, t_fract *f)
 		return (0);
 	}
 	ft_zoom(f, x, y);
-	ft_main_loops_mouse(f);
+	ft_main_loops(f);
 	ft_display(f);
 	return (0);
 }

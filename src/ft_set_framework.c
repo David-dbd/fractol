@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_set_framework.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: DAVID <DAVID@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 21:01:56 by davdiaz-          #+#    #+#             */
-/*   Updated: 2025/07/30 02:10:30 by davdiaz-         ###   ########.fr       */
+/*   Updated: 2025/07/31 19:43:08 by DAVID            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 int	ft_set_framework(t_fract *f)
 {
 	f->counter = 1;
-	if (f->c == 'm')
+	if (f->type == 'm')
 	{
 		f->min_re = -2.0;
 		f->max_re = 1.0;
 		f->min_im = -1.2;
 		f->max_im = 1.2;
 	}
-	else if (f->c == 'j')
+	else if (f->type == 'j')
 	{
-		f->min_re = -1.5;
-		f->max_re = 1.5;
-		f->min_im = -1.5;
-		f->max_im = 1.5;
+		f->min_re = -1.2;
+		f->max_re = 1.2;
+		f->min_im = -1.0;
+		f->max_im = 1.0;
 	}
-	else if (f->c == 'b')
+	else if (f->type == 'b')
 	{
 		f->min_re = -2.8;
 		f->max_re = 2.2;

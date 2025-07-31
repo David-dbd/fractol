@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_zoom.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: davdiaz- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: DAVID <DAVID@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 21:11:04 by davdiaz-          #+#    #+#             */
-/*   Updated: 2025/07/30 10:01:45 by davdiaz-         ###   ########.fr       */
+/*   Updated: 2025/07/31 19:54:36 by DAVID            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	ft_zoom(t_fract *f, int x, int y)
 }
 
 /*
+This function is only to zoom in or out int the center of the fractal.
 int	ft_zoom(t_fract *f)
 {
 	double	center_real;
