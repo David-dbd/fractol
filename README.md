@@ -194,3 +194,71 @@ Si $x^2 + y^2 > 4$, el punto escapa, evitando cálculos costosos.
 6. Determinar si escapa y asignar color
 7. Escribir color en el buffer
 8. Mostrar imagen y mantener el loop
+
+Claro, aquí tienes solo la **sección de uso** para tu README, mostrando cómo ejecutar el programa, los argumentos válidos y la ayuda que se muestra si el usuario se equivoca:
+
+---
+
+## 🚀 Uso del programa
+
+1. **Clonar el repositorio**
+
+   ```bash
+   git clone <url_del_repositorio>
+   cd fractol
+   ```
+
+2. **Compilar el proyecto**
+
+   ```bash
+   make
+   ```
+
+3. **Ejecutar el programa**
+
+   ```bash
+   ./fractol <tipo_de_fractal> [coordenadas]
+   ```
+
+   **Ejemplos:**
+
+   ```bash
+   ./fractol mandelbrot
+   ./fractol burningship
+   ./fractol julia -0.7 0.5675
+   ./fractol julia -0.8 0.156
+   ./fractol julia 0.285 0
+   ```
+
+4. **Tipos de fractal disponibles:**
+
+   * `mandelbrot`
+   * `burningship`
+   * `julia` *(requiere dos coordenadas entre -2.0 y 2.0)*
+
+5. **Si el usuario introduce un argumento inválido**, el programa muestra la ayuda:
+
+```
+Invalid input from user
+
+Available input: 
+
+* Type of fractal: Julia - Mandelbrot - Burningship
+
+* If you choose Julia, then add: 
+  one coordinate separated by space.
+
+* Egs. 
+  ./fractol julia -0.7 0.5675
+  ./fractol julia -0.8 0.156 
+  ./fractol julia -0.4 0.6 
+  ./fractol julia -0.75 0.11
+  ./fractol julia 0.285 0
+
+* Please note values can go from -2.0 to 2.0
+```
+
+---
+
+Si quieres, puedo añadir **una sección de controles** para explicar cómo usar el teclado y el mouse para hacer zoom y mover el fractal. ¿Quieres que la agregue también?
+
