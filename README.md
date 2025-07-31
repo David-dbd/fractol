@@ -1,6 +1,3 @@
-Perfecto, ahora voy a reescribir el README **enriquecido con párrafos explicativos en cada paso** tomando tu borrador como base.
-Tendrás:
-
 
 ---
 <h1>Fractol</h1>
@@ -194,8 +191,6 @@ Si $x^2 + y^2 > 4$, el punto escapa, evitando cálculos costosos.
 6. Determinar si escapa y asignar color
 7. Escribir color en el buffer
 8. Mostrar imagen y mantener el loop
-
-Claro, aquí tienes solo la **sección de uso** para tu README, mostrando cómo ejecutar el programa, los argumentos válidos y la ayuda que se muestra si el usuario se equivoca:
 
 ---
 
