@@ -1,3 +1,6 @@
+<p align="right">
+  <a href="README.md">🇪🇸 Español</a> • <a href="README.en.md">🇺🇸 English</a>
+</p>
 
 ---
 <h1>Fractol</h1>
