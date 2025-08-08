@@ -5,8 +5,7 @@
 <h1>Fractol</h1>
 Fractol es un proyecto en C que ilustra fractales en tiempo real utilizando la librería MiniLibX y conceptos de matemática compleja.
 Se trabajan fractales como Mandelbrot, Julia y Burning Ship, los cuales se generan aplicando iteraciones sobre números complejos para cada pixel de la pantalla.
----
----
+
 <br>
 <br>
 <img width="500" height="400" alt="Screenshot from 2025-07-30 15-01-20" src="https://github.com/user-attachments/assets/e90fe2e2-f536-4bf3-9553-2c95f851b3aa" />
