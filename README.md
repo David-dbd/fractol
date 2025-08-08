@@ -6,11 +6,11 @@
 Fractol es un proyecto en C que ilustra fractales en tiempo real utilizando la librería MiniLibX y conceptos de matemática compleja.
 Se trabajan fractales como Mandelbrot, Julia y Burning Ship, los cuales se generan aplicando iteraciones sobre números complejos para cada pixel de la pantalla.
 ---
----<img width="1409" height="1567" alt="Screenshot from 2025-07-30 15-01-20" src="https://github.com/user-attachments/assets/e90fe2e2-f536-4bf3-9553-2c95f851b3aa" />
-<img width="1396" height="1581" alt="Screenshot from 2025-07-30 15-02-59" src="https://github.com/user-attachments/assets/7cfa6c05-6011-44b6-8f05-e959924d9040" />
-<img width="1400" height="1573" alt="Screenshot from 2025-07-30 15-03-32" src="https://github.com/user-attachments/assets/6af28500-dcce-4ccd-a0c1-000f56d3aec2" />
-<img width="1398" height="1569" alt="Screenshot from 2025-07-30 15-04-22" src="https://github.com/user-attachments/assets/9f22a5e7-749e-415c-a331-fe2e23444386" />
-<img width="1398" height="1569" alt="Screenshot from 2025-07-30 15-05-31" src="https://github.com/user-attachments/assets/ed3c11d1-6cb8-4447-9fd0-75f8be18a7c8" />
+---<img width="500" height="400" alt="Screenshot from 2025-07-30 15-01-20" src="https://github.com/user-attachments/assets/e90fe2e2-f536-4bf3-9553-2c95f851b3aa" />
+<img width="500" height="400" alt="Screenshot from 2025-07-30 15-02-59" src="https://github.com/user-attachments/assets/7cfa6c05-6011-44b6-8f05-e959924d9040" />
+<img width="500" height="400" alt="Screenshot from 2025-07-30 15-03-32" src="https://github.com/user-attachments/assets/6af28500-dcce-4ccd-a0c1-000f56d3aec2" />
+<img width="500" height="400" alt="Screenshot from 2025-07-30 15-04-22" src="https://github.com/user-attachments/assets/9f22a5e7-749e-415c-a331-fe2e23444386" />
+<img width="500" height="400" alt="Screenshot from 2025-07-30 15-05-31" src="https://github.com/user-attachments/assets/ed3c11d1-6cb8-4447-9fd0-75f8be18a7c8" />
 ---
 ## 📚 Teoría y Contexto
 
