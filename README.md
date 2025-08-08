@@ -7,7 +7,8 @@ Fractol es un proyecto en C que ilustra fractales en tiempo real utilizando la l
 Se trabajan fractales como Mandelbrot, Julia y Burning Ship, los cuales se generan aplicando iteraciones sobre números complejos para cada pixel de la pantalla.
 ---
 ---
-
+<br>
+<br>
 <img width="500" height="400" alt="Screenshot from 2025-07-30 15-01-20" src="https://github.com/user-attachments/assets/e90fe2e2-f536-4bf3-9553-2c95f851b3aa" />
 <img width="500" height="400" alt="Screenshot from 2025-07-30 15-02-59" src="https://github.com/user-attachments/assets/7cfa6c05-6011-44b6-8f05-e959924d9040" />
 <img width="500" height="400" alt="Screenshot from 2025-07-30 15-03-32" src="https://github.com/user-attachments/assets/6af28500-dcce-4ccd-a0c1-000f56d3aec2" />
