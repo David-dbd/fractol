@@ -13,10 +13,11 @@ Se trabajan fractales como Mandelbrot, Julia y Burning Ship, los cuales se gener
 <img width="500" height="400" alt="Screenshot from 2025-07-30 15-03-32" src="https://github.com/user-attachments/assets/6af28500-dcce-4ccd-a0c1-000f56d3aec2" />
 <img width="500" height="400" alt="Screenshot from 2025-07-30 15-04-22" src="https://github.com/user-attachments/assets/9f22a5e7-749e-415c-a331-fe2e23444386" />
 <img width="500" height="400" alt="Screenshot from 2025-07-30 15-05-31" src="https://github.com/user-attachments/assets/ed3c11d1-6cb8-4447-9fd0-75f8be18a7c8" />
----
+
 <br>
 <br>
-## 📚 Teoría y Contexto
+
+### 📚 Teoría y Contexto
 
 Un **fractal** es un conjunto definido por una iteración matemática.
 Partimos de la fórmula general:
